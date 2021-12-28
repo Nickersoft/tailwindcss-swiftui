@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "@types/node": "^17.0.5",
+    "color": "^4.1.0",
+    "commander": "^8.3.0",
+    "daisyui": "^1.20.0",
+    "esbuild": "^0.14.8",
+    "file-eval": "^2.0.0",
+    "lodash": "^4.17.21",
+    "tailwindcss": "^3.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "build": "node ./build.js",
+    "start": "node ./dist/cli.js",
+    "dev": "ts-node ./src/main.ts"
+  },
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "@types/color": "^3.0.2",
+    "@types/commander": "^2.12.2",
+    "@types/lodash": "^4",
+    "@types/tailwindcss": "^2.2.4",
+    "@yarnpkg/esbuild-plugin-pnp": "^2.0.0"
+  },
+  "dependenciesMeta": {
+    "@types/tailwindcss@2.2.4": {
+      "unplugged": true
+    },
+    "tailwindcss@3.0.7": {
+      "unplugged": true
+    }
+  }
+}
