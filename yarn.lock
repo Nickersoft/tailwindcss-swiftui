@@ -460,6 +460,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chalk@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "chalk@npm:5.0.0"
+  checksum: 6eba7c518b9aa5fe882ae6d14a1ffa58c418d72a3faa7f72af56641f1bbef51b645fca1d6e05d42357b7d3c846cd504c0b7b64d12309cdd07867e3b4411e0d01
+  languageName: node
+  linkType: hard
+
 "chokidar@npm:^3.5.2":
   version: 3.5.2
   resolution: "chokidar@npm:3.5.2"
@@ -928,6 +935,13 @@ __metadata:
   version: 1.0.5
   resolution: "escape-string-regexp@npm:1.0.5"
   checksum: 6092fda75c63b110c706b6a9bfde8a612ad595b628f0bd2147eea1d3406723020810e591effc7db1da91d80a71a737a313567c5abb3813e8d9c71f4aa595b410
+  languageName: node
+  linkType: hard
+
+"eta@npm:^1.12.3":
+  version: 1.12.3
+  resolution: "eta@npm:1.12.3"
+  checksum: 390c1cd320755cb98fd5a4a911539e8ed498fc49b82414f0023033ff606d80a34e6df0aeeb9fb0b519b318a750e6d17a72fc25f8a8c686cfc52d638e998237a1
   languageName: node
   linkType: hard
 
@@ -1846,10 +1860,12 @@ __metadata:
     "@types/node": ^17.0.5
     "@types/tailwindcss": ^2.2.4
     "@yarnpkg/esbuild-plugin-pnp": ^2.0.0
+    chalk: ^5.0.0
     color: ^4.1.0
     commander: ^8.3.0
     daisyui: ^1.20.0
     esbuild: ^0.14.8
+    eta: ^1.12.3
     file-eval: ^2.0.0
     lodash: ^4.17.21
     tailwindcss: ^3.0.7

@@ -4,7 +4,7 @@
 
 ## What am I looking at?
 
-This is an early attempt at building a CLI tool (written in Node, though I wish it could be Swift*) to generate Tailwind SwiftUI styles from a `tailwind.config.js` file. 
+This is an early attempt at building a CLI tool (written in Node, though I wish it could be Swift\*) to generate Tailwind SwiftUI styles from a `tailwind.config.js` file.
 
 Imagine writing this for your web app:
 
@@ -16,10 +16,10 @@ export default {
       blue: {
         light: "#94B3FF",
         dark: "#649FFF",
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};
 ```
 
 and using it in your SwiftUI app as:
@@ -44,5 +44,5 @@ You could, but given how easy SwiftUI is to pick up, there's really no excuse to
 ## Current Roadmap
 
 - [x] Colors
-- [ ] Shadows
+- [x] Shadows
 - [ ] Spacing

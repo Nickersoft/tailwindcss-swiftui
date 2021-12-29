@@ -198,6 +198,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+out.json
 dist
 *.swift
 tailwind.config.js
