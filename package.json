@@ -19,7 +19,7 @@
   "type": "module",
   "scripts": {
     "build": "node ./build.js",
-    "start": "node ./dist/cli.js",
+    "start": "node ./dist/cli.cjs",
     "dev": "node --loader ts-node/esm ./src/main.ts"
   },
   "packageManager": "yarn@3.1.1",

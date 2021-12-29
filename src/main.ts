@@ -46,7 +46,7 @@ program
     return self.shadow(color: s.color, x: s.x, y: s.y, blur: s.blur)
   }
 }`;
-
+      console.log(JSON.stringify(Object.keys(theme)));
       writeFileSync(
         output,
         ["import SwiftUI\n", baseEnum, shadowExtension].join("\n"),

@@ -1,10 +1,11 @@
-const { pnpPlugin } = require("@yarnpkg/esbuild-plugin-pnp");
-const { build } = require("esbuild");
+import { pnpPlugin } from "@yarnpkg/esbuild-plugin-pnp";
+import { build } from "esbuild";
 
 build({
-  outfile: "./dist/cli.js",
+  outfile: "./dist/cli.cjs",
   bundle: true,
   platform: "node",
+  target: "node16",
   entryPoints: ["./src/main.ts"],
   plugins: [pnpPlugin()],
 });
