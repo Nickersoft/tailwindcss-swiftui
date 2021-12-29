@@ -81,7 +81,7 @@ You could, but given how easy SwiftUI is to pick up, there's really no excuse to
 - [ ] divideColor
 - [ ] divideOpacity
 - [ ] divideWidth
-- [ ] dropShadow
+- [x] dropShadow
 - [ ] fill
 - [ ] grayscale
 - [ ] hueRotate

@@ -7,8 +7,10 @@ import resolveConfig from "tailwindcss/resolveConfig.js";
 import feval from "file-eval";
 
 import { generateColors } from "./generators/colors.js";
-import { swiftEnum } from "./templates.js";
 import { generateShadows } from "./generators/shadows.js";
+import { generateSpacing } from "./generators/spacing.js";
+
+import templates from "./templates.js";
 
 const program = new Command();
 
@@ -29,11 +31,15 @@ program
       const config = resolveConfig(evald);
 
       const { theme } = config;
-      const { boxShadow, colors } = theme;
+      const { boxShadow, spacing, colors } = theme;
 
-      const children = [generateColors(colors), generateShadows(boxShadow)];
+      const children = [
+        generateColors(colors),
+        generateShadows(boxShadow),
+        generateSpacing(spacing),
+      ];
 
-      const baseEnum = swiftEnum(
+      const baseEnum = templates.enum(
         {
           name: "Tailwind",
           children,
@@ -46,7 +52,7 @@ program
     return self.shadow(color: s.color, x: s.x, y: s.y, blur: s.blur)
   }
 }`;
-      console.log(JSON.stringify(Object.keys(theme)));
+
       writeFileSync(
         output,
         ["import SwiftUI\n", baseEnum, shadowExtension].join("\n"),

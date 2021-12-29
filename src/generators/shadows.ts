@@ -3,11 +3,11 @@ import _ from "lodash";
 import { compile, config } from "eta";
 
 import { createSwiftEnum } from "../utils/createSwiftEnum.js";
-import { parseShadow } from "../utils/parseShadow.js";
-import { swiftLetMember, swiftStruct } from "../templates.js";
+import { parseShadow } from "../parsers/shadow.js";
 import { colorToSwiftUI } from "../utils/colorToSwiftUI.js";
 
 import log from "../utils/log.js";
+import templates from "../templates.js";
 
 export const tailwindShadowValue = compile(
   `Shadow(color: <%= it.color %>, x: <%= it.x %>, y: <%= it.y %>, blur: <%= it.blur %>)`
@@ -15,14 +15,14 @@ export const tailwindShadowValue = compile(
 
 const { isNil, isString } = _;
 
-const shadowStruct = swiftStruct(
+const shadowStruct = templates.struct(
   {
     name: "Shadow",
     children: [
-      swiftLetMember({ name: "color", type: "Color" }, config),
-      swiftLetMember({ name: "x", type: "CGFloat" }, config),
-      swiftLetMember({ name: "y", type: "CGFloat" }, config),
-      swiftLetMember({ name: "blur", type: "CGFloat" }, config),
+      templates.let.declaration({ name: "color", type: "Color" }, config),
+      templates.let.declaration({ name: "x", type: "CGFloat" }, config),
+      templates.let.declaration({ name: "y", type: "CGFloat" }, config),
+      templates.let.declaration({ name: "blur", type: "CGFloat" }, config),
     ],
   },
   config

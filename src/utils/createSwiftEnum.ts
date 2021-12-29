@@ -1,7 +1,8 @@
 import _ from "lodash";
 
 import { config } from "eta";
-import { swiftEnum, swiftStaticLet } from "../templates.js";
+
+import templates from "../templates.js";
 
 const { camelCase, isObject, isString, startCase } = _;
 
@@ -45,7 +46,7 @@ function _createSwiftEnum(
       const processed = processValue(value);
 
       if (processed !== null) {
-        const line = swiftStaticLet(
+        const line = templates.let.assignment.static(
           {
             variable: _safeVariableName(key, name),
             value: processed,
@@ -61,7 +62,7 @@ function _createSwiftEnum(
   }, [] as string[]);
 
   if (children.length > 0) {
-    return swiftEnum({ name, children }, config);
+    return templates.enum({ name, children }, config);
   }
 
   return "";
